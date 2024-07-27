@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+const API = import.meta.env.VITE_API_URL
+
 const EditDino = () => {
     
     const [dinoDetails, setDinoDetails] = useState({
@@ -65,21 +67,21 @@ const EditDino = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
-                <input id="name" type="text" value={newDino.name} onChange={handleTextChange} required />
+                <input id="name" type="text" value={dinoDetails.name} onChange={handleTextChange} required />
                 <label htmlFor="era">Era:</label>
-                <input id="era" type="text" value={newDino.era} onChange={handleTextChange} required />
+                <input id="era" type="text" value={dinoDetails.era} onChange={handleTextChange} required />
                 <label htmlFor="diet">Diet:</label>
-                <input id="diet" type="text" value={newDino.diet} onChange={handleTextChange} required />
+                <input id="diet" type="text" value={dinoDetails.diet} onChange={handleTextChange} required />
                 <label htmlFor="length">Length:</label>
-                <input id="length" type="number" value={newDino.length} onChange={handleTextChange} required />
+                <input id="length" type="number" value={dinoDetails.length} onChange={handleTextChange} required />
                 <label htmlFor="weight">Weight:</label>
-                <input id="weight" type="number" value={newDino.weight} onChange={handleTextChange} required />
+                <input id="weight" type="number" value={dinoDetails.weight} onChange={handleTextChange} required />
                 <label htmlFor="habitat">Habitat:</label>
-                <input id="habitat" type="text" value={newDino.habitat} onChange={handleTextChange} required />
+                <input id="habitat" type="text" value={dinoDetails.habitat} onChange={handleTextChange} required />
                 <label htmlFor="year_discovered">Year Discovered:</label>
-                <input id="year_discovered" type="number" value={newDino.year_discovered} onChange={handleTextChange} required />
+                <input id="year_discovered" type="number" value={dinoDetails.year_discovered} onChange={handleTextChange} required />
                 <label htmlFor="bipedal">Bipedal:</label>
-                <input id="bipedal" type="text" value={newDino.bipedal} onChange={handleTextChange} required />
+                <input id="bipedal" type="text" value={dinoDetails.bipedal} onChange={handleTextChange} required />
                 <button>Submit</button>
             </form>
         </div>

@@ -20,7 +20,7 @@ function App() {
           <Route path='/dinos' element={<DinoIndex/>} />
           <Route path='/dinos/:id' element={<Dino/>} />
           <Route path='/dinos/new' element={<NewDino/>} />
-          <Route path='/dinos/edit' element={<EditDino/>} />
+          <Route path='/dinos/:id/edit' element={<EditDino/>} />
         </Routes>
         </main>
       </Router>
