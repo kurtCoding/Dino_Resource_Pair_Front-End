@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL
@@ -13,7 +13,7 @@ const NewDino = () => {
         habitat: "",
         year_discovered: 0,
         bipedal: ""
-    });
+    })
 
     let navigate = useNavigate();
 

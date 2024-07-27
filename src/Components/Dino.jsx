@@ -39,7 +39,7 @@ const Dino = () => {
             method: "DELETE"
         })
         .then(() => {
-            navigate("/dinoindex")
+            navigate("/dinos")
         })
         .catch((error) => {
             console.error(error);
@@ -58,7 +58,7 @@ const Dino = () => {
                 <p>{dino.year_discovered}</p>
                 <p>{dino.bipedal}</p>
             </div>
-            <Link to={`/dinoindex/${id}/editdino`}>
+            <Link to={`/dinos/${id}/edit`}>
             <button>Edit Dino</button>
             </Link>
             <button onClick={handleDelete}>Delete Dino</button>

@@ -1,11 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import DinoIndexItem from "./DinoIndexItem";
+
 
 const API = import.meta.env.VITE_API_URL
 
 const DinoIndex = () => {
     const [dinos, setDinos] = useState([]);
     useEffect(() => {
+        console.log(API);
         fetch(`${API}/dinos`)
         .then((res) => {
             return res.json()
@@ -20,7 +23,7 @@ const DinoIndex = () => {
     return (
         <div>
             {dinos.map((dino) => {
-                return <Dino key={dino.id} dino={dino} />
+                return <DinoIndexItem key={dino.id} dino={dino} />
             })}
         </div>
     )

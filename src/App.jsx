@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar'
 import Dino from './Components/Dino'
 import DinoIndex from './Components/DinoIndex'
 import NewDino from './Components/NewDino'
+import EditDino from './Components/EditDino'
 
 function App() {
 
@@ -16,9 +17,10 @@ function App() {
         <main>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/dino/dinoindex' element={<DinoIndex/>} />
-          <Route path='/dino' element={<Dino/>} />
-          <Route path='/dino/newdino' element={<NewDino/>} />
+          <Route path='/dinos' element={<DinoIndex/>} />
+          <Route path='/dinos/:id' element={<Dino/>} />
+          <Route path='/dinos/new' element={<NewDino/>} />
+          <Route path='/dinos/edit' element={<EditDino/>} />
         </Routes>
         </main>
       </Router>
