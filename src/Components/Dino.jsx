@@ -21,7 +21,7 @@ const Dino = () => {
     let {id} = useParams();
 
     useEffect(() => {
-        fetch(`${API}/dinoindex/${id}`)
+        fetch(`${API}/dinos/${id}`)
         .then((res) => {
             return res.json()
         })
@@ -35,7 +35,7 @@ const Dino = () => {
     }, [id, navigate]);
 
     const handleDelete = () => {
-        fetch(`${API}/dinoindex/${id}`, {
+        fetch(`${API}/dinos/${id}`, {
             method: "DELETE"
         })
         .then(() => {
