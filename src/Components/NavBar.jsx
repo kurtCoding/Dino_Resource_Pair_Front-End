@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <div>
-            {/* <h1>DinoSite</h1> */}
             <Link to="/dinos">DinoDex</Link>
-            {/* <button type="submit">Add Dino</button> */}
+            <Link to="/">Home</Link>
         </div>
     )
 }
